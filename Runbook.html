@@ -222,14 +222,15 @@ tbody td{padding:9px 13px;border-bottom:1px solid #edf0f5;vertical-align:middle}
 
   <a href="#perf"><span class="ic">⚡</span> Performance Testing</a>
   
-  <div class="s-section">Phase 4 — Cutover</div>
-  <a href="#pregate"><span class="ic">🚧</span> Pre-Cutover Gate</a>
-  <a href="#gonogo"><span class="ic">🚦</span> Go / No-Go</a>
-  <a href="#cutover"><span class="ic">🚀</span> Zero-Hour Runsheet</a>
-  <div class="s-section">Governance</div>
-  <a href="#rollback"><span class="ic">↩️</span> Rollback Plan</a>
-  <a href="#comms"><span class="ic">📢</span> Communication Plan</a>
-  <a href="#hypercare"><span class="ic">🛡️</span> Hypercare</a>
+   <div class="s-section">Phase 4 — Cutover</div>
+   <a href="#codesync"><span class="ic">🔐</span> Code Sync & Secrets</a>
+   <a href="#pregate"><span class="ic">🚧</span> Pre-Cutover Gate</a>
+   <a href="#gonogo"><span class="ic">🚦</span> Go / No-Go</a>
+   <a href="#cutover"><span class="ic">🚀</span> Zero-Hour Runsheet</a>
+   <div class="s-section">Governance</div>
+   <a href="#rollback"><span class="ic">↩️</span> Rollback Plan</a>
+   <a href="#comms"><span class="ic">📢</span> Communication Plan</a>
+   <a href="#hypercare"><span class="ic">🛡️</span> Hypercare</a>
   <div class="s-section">Documents</div>
   <a href="#appendix"><span class="ic">📎</span> Appendices</a>
 </div>
@@ -277,9 +278,9 @@ tbody td{padding:9px 13px;border-bottom:1px solid #edf0f5;vertical-align:middle}
 <!-- STATUS -->
 <!-- ── SECTION 1: OVERVIEW ── -->
 <section id="overview">
-  <div class="section-header"><div class="sec-hdr"><div class="sec-num">1</div><h2>Executive Summary & Scope</h2></div>
+   <div class="sec-hdr"><div class="sec-num">1</div><h2>Executive Summary & Scope</h2></div>
 
-  <div class="kpi-grid">
+   <div class="kpi-grid">
     <div class="kpi-card"><div class="kpi-val">4</div><div class="kpi-label">Week Timeline</div></div>
     <div class="kpi-card green"><div class="kpi-val">52</div><div class="kpi-label">Total Tasks</div></div>
     <div class="kpi-card teal"><div class="kpi-val">7</div><div class="kpi-label">Approval Gates</div></div>
@@ -497,7 +498,7 @@ dig equinix.com | grep -i ttl
 
 <!-- PRE-GATE -->
 <section id="pregate">
-  <div class="sec-hdr"><div class="sec-num">10</div><h2>Phase 4 — Pre-Cutover Gate</h2></div>
+   <div class="sec-hdr"><div class="sec-num">17</div><h2>Phase 4 — Pre-Cutover Gate</h2></div>
   <div class="alert a-amber"><span class="a-icon">🚧</span><div>All items below must be GREEN before the Go/No-Go meeting can proceed. This list is reviewed live in the meeting. Any RED item = automatic NO-GO.</div></div>
   <div class="tw"><table>
     <thead><tr><th>#</th><th>Gate Item</th><th>Owner</th><th>Status</th><th>Evidence Required</th></tr></thead>
@@ -519,7 +520,7 @@ dig equinix.com | grep -i ttl
 
 <!-- GO/NO-GO -->
 <section id="gonogo">
-  <div class="sec-hdr"><div class="sec-num">11</div><h2>Go / No-Go Decision Gate</h2></div>
+   <div class="sec-hdr"><div class="sec-num">18</div><h2>Go / No-Go Decision Gate</h2></div>
   <div class="alert a-red"><span class="a-icon">🚦</span><div>Mandatory meeting before cutover. <strong>All 10 criteria must be GREEN</strong>. Any single RED = automatic NO-GO. All sign-off roles must be present or provide written delegation.</div></div>
   <div class="tw"><table>
     <thead><tr><th>#</th><th>Criterion</th><th>Threshold</th><th>Owner</th><th>Status</th></tr></thead>
@@ -550,7 +551,7 @@ dig equinix.com | grep -i ttl
 
 <!-- CUTOVER -->
 <section id="cutover">
-  <div class="sec-hdr"><div class="sec-num">12</div><h2>Zero-Hour Cutover Runsheet</h2></div>
+   <div class="sec-hdr"><div class="sec-num">19</div><h2>Zero-Hour Cutover Runsheet</h2></div>
   <div class="alert a-blue"><span class="a-icon">📋</span><div>Log the actual start and end time for every step during execution. If any step fails, <strong>stop and escalate immediately</strong> — do not proceed to the next step.</div></div>
   <div class="tw"><table>
     <thead><tr><th>Step</th><th>Activity</th><th>Owner</th><th>Status</th></tr></thead>
@@ -581,7 +582,7 @@ dig equinix.com | grep -i ttl
 
 <!-- ROLLBACK -->
 <section id="rollback">
-  <div class="sec-hdr"><div class="sec-num">13</div><h2>Rollback Plan</h2></div>
+   <div class="sec-hdr"><div class="sec-num">20</div><h2>Rollback Plan</h2></div>
   <div class="alert a-amber"><span class="a-icon">⚠️</span><div><strong>Keep AMS in maintenance mode for 72 hours post-cutover.</strong> This is your rollback safety net. Rollback authority: Monish or Dev Lead.</div></div>
   <h3>Rollback Triggers</h3>
   <ul class="cl">
@@ -612,7 +613,7 @@ dig equinix.com | grep -i ttl
 
 <!-- COMMS -->
 <section id="comms">
-  <div class="sec-hdr"><div class="sec-num">14</div><h2>Communication Plan — Phase 3 & 4</h2></div>
+   <div class="sec-hdr"><div class="sec-num">21</div><h2>Communication Plan — Phase 3 & 4</h2></div>
   <div class="tw"><table>
     <thead><tr><th>Audience</th><th>Channel</th><th>Frequency</th><th>Content</th><th>Owner</th></tr></thead>
     <tbody>
@@ -628,7 +629,7 @@ dig equinix.com | grep -i ttl
 
 <!-- HYPERCARE -->
 <section id="hypercare">
-  <div class="sec-hdr"><div class="sec-num">15</div><h2>Post-Migration Hypercare (Days 1–14)</h2></div>
+   <div class="sec-hdr"><div class="sec-num">22</div><h2>Post-Migration Hypercare (Days 1–14)</h2></div>
   <div class="tw"><table>
     <thead><tr><th>Period</th><th>Activity</th><th>Team</th><th>Cadence</th></tr></thead>
     <tbody>
@@ -640,12 +641,89 @@ dig equinix.com | grep -i ttl
       <tr><td><strong>Day 10</strong></td><td>Confirm AMS zero traffic for 72h — prerequisite for decommission</td><td>Dev Lead</td><td>One-time</td></tr>
       <tr><td><strong>Day 14</strong></td><td>Hypercare exit: sign-off to BAU; AMS decommission request submitted</td><td>All Leads + Monish</td><td>One-time</td></tr>
     </tbody>
-  </table></div>
+   </table></div>
+</section>
+
+<!-- CODE SYNC, ENVIRONMENT VARIABLES & SECRETS -->
+<section id="codesync">
+   <div class="sec-hdr"><div class="sec-num">16</div><h2>Code Sync, Environment Variables & Secrets</h2><span class="b b-urgent badge">⚠️ Must Complete Before Phase 4 Cutover</span></div>
+   <div class="alert a-red"><span class="a-icon">🔐</span><div><strong>All secrets must be migrated out of code/config into Cloud Manager before cutover.</strong> Any hardcoded credentials will block the pipeline quality gate.</div></div>
+
+   <h3>Section A — Final Code Sync</h3>
+   <div class="tw"><table>
+     <thead><tr><th>#</th><th>Task</th><th>Owner</th><th>Status</th><th>Notes / Command</th></tr></thead>
+     <tbody>
+       <tr><td>1</td><td>Confirm migration/aemcs branch has all QA bug fixes merged</td><td>Dev Lead</td><td><span class="b b-amber">🟡 In Progress</span></td><td></td></tr>
+       <tr><td>2</td><td>Sync migration/aemcs with main/master — resolve merge conflicts</td><td>Dev Lead</td><td><span class="b b-todo">⬜ TODO</span></td><td></td></tr>
+       <tr><td>3</td><td>Full local build: mvn clean install — confirm zero failures</td><td>Dev Lead</td><td><span class="b b-todo">⬜ TODO</span></td><td></td></tr>
+       <tr><td>4</td><td>Run aemanalyser — confirm 0 BLOCKED violations</td><td>Dev Lead</td><td><span class="b b-todo">⬜ TODO</span></td><td></td></tr>
+       <tr><td>5</td><td>Trigger non-prod pipeline in Cloud Manager — quality gate must pass</td><td>Dev Lead</td><td><span class="b b-todo">⬜ TODO</span></td><td></td></tr>
+       <tr><td>6</td><td>Verify Stage deployment is from Cloud Manager pipeline (not local)</td><td>Dev Lead</td><td><span class="b b-todo">⬜ TODO</span></td><td></td></tr>
+       <tr><td>7</td><td>Tag release commit: git tag v1.0.0-prod-cutover</td><td>Dev Lead</td><td><span class="b b-todo">⬜ TODO</span></td><td></td></tr>
+       <tr><td>8</td><td>Confirm production pipeline points to release tag / branch</td><td>Pritam</td><td><span class="b b-todo">⬜ TODO</span></td><td></td></tr>
+       <tr><td>9</td><td>Lock migration/aemcs branch — no commits without PM approval</td><td>Dev Lead</td><td><span class="b b-todo">⬜ TODO</span></td><td></td></tr>
+       <tr><td>10</td><td>Document final commit SHA and pipeline ID for audit trail</td><td>Dev Lead</td><td><span class="b b-todo">⬜ TODO</span></td><td></td></tr>
+     </tbody>
+   </table></div>
+
+   <h3>Section B — Environment Variables (Cloud Manager)</h3>
+   <div class="tw"><table>
+     <thead><tr><th>Variable Name</th><th>Description</th><th>Environment</th><th>Type</th><th>Dev</th><th>Stage</th><th>Production</th></tr></thead>
+     <tbody>
+       <tr><td>AEM_REPLICATION_PASSWORD</td><td>Replication agent password Author→Publish</td><td>All</td><td>Secret</td><td><span class="b b-done">✅ Done</span></td><td><span class="b b-done">✅ Done</span></td><td><span class="b b-todo">⬜ TODO</span></td></tr>
+       <tr><td>SMTP_HOST</td><td>Mail server hostname for form submission emails</td><td>All</td><td>String</td><td><span class="b b-done">✅ Done</span></td><td><span class="b b-done">✅ Done</span></td><td><span class="b b-todo">⬜ TODO</span></td></tr>
+       <tr><td>SMTP_PASSWORD</td><td>Mail server authentication password</td><td>All</td><td>Secret</td><td><span class="b b-done">✅ Done</span></td><td><span class="b b-done">✅ Done</span></td><td><span class="b b-todo">⬜ TODO</span></td></tr>
+       <tr><td>SEARCH_API_KEY</td><td>Elasticsearch / Adobe Search API key</td><td>All</td><td>Secret</td><td><span class="b b-done">✅ Done</span></td><td><span class="b b-done">✅ Done</span></td><td><span class="b b-todo">⬜ TODO</span></td></tr>
+       <tr><td>ANALYTICS_TRACKING_ID</td><td>Adobe Analytics / GA tracking ID</td><td>All</td><td>String</td><td><span class="b b-done">✅ Done</span></td><td><span class="b b-done">✅ Done</span></td><td><span class="b b-todo">⬜ TODO</span></td></tr>
+       <tr><td>IBX_API_ENDPOINT</td><td>IBX integration API base URL</td><td>All</td><td>String</td><td><span class="b b-done">✅ Done</span></td><td><span class="b b-amber">🟡 In Progress</span></td><td><span class="b b-todo">⬜ TODO</span></td></tr>
+       <tr><td>IBX_API_KEY</td><td>IBX integration authentication key</td><td>All</td><td>Secret</td><td><span class="b b-done">✅ Done</span></td><td><span class="b b-amber">🟡 In Progress</span></td><td><span class="b b-todo">⬜ TODO</span></td></tr>
+       <tr><td>PARTNER_PORTAL_TOKEN</td><td>Partner portal integration token</td><td>All</td><td>Secret</td><td><span class="b b-done">✅ Done</span></td><td><span class="b b-amber">🟡 In Progress</span></td><td><span class="b b-todo">⬜ TODO</span></td></tr>
+       <tr><td>RWS_TRANSLATION_API_KEY</td><td>RWS (SDL) translation connector API key</td><td>All</td><td>Secret</td><td><span class="b b-amber">🟡 In Progress</span></td><td><span class="b b-todo">⬜ TODO</span></td><td><span class="b b-todo">⬜ TODO</span></td></tr>
+       <tr><td>CDN_ORIGIN_HOSTNAME</td><td>AEMaaCS publish CDN origin hostname</td><td>All</td><td>String</td><td><span class="b b-done">✅ Done</span></td><td><span class="b b-done">✅ Done</span></td><td><span class="b b-todo">⬜ TODO</span></td></tr>
+       <tr><td>DISPATCHER_WHITELIST_IPS</td><td>Allowed IPs for Dispatcher config</td><td>All</td><td>String</td><td><span class="b b-done">✅ Done</span></td><td><span class="b b-done">✅ Done</span></td><td><span class="b b-todo">⬜ TODO</span></td></tr>
+       <tr><td>PROD_PUBLISH_URL</td><td>Production Publish URL</td><td>Prod</td><td>String</td><td>N/A</td><td>N/A</td><td><span class="b b-todo">⬜ TODO</span></td></tr>
+     </tbody>
+   </table></div>
+
+   <h3>Section C — Secrets Migration & Audit</h3>
+   <div class="tw"><table>
+     <thead><tr><th>#</th><th>Task</th><th>Owner</th><th>Status</th><th>Verification Method</th></tr></thead>
+     <tbody>
+       <tr><td>1</td><td>Audit OSGi configs for hardcoded credentials (grep scan)</td><td>Dev Lead</td><td><span class="b b-todo">⬜ TODO</span></td><td></td></tr>
+       <tr><td>2</td><td>Audit AMS CRX/DE /conf and /apps for stored credentials</td><td>Dev Lead</td><td><span class="b b-todo">⬜ TODO</span></td><td></td></tr>
+       <tr><td>3</td><td>Audit source code for any hardcoded secrets or API keys</td><td>Dev Lead</td><td><span class="b b-todo">⬜ TODO</span></td><td></td></tr>
+       <tr><td>4</td><td>Export full AMS secrets inventory to secure doc (not Git)</td><td>Dev Lead</td><td><span class="b b-todo">⬜ TODO</span></td><td></td></tr>
+       <tr><td>5</td><td>Add all secrets to Cloud Manager Production as Secret type variables</td><td>Dev Lead / Pritam</td><td><span class="b b-todo">⬜ TODO</span></td><td></td></tr>
+       <tr><td>6</td><td>Update all OSGi configs to reference CM variables, not hardcoded</td><td>Dev Lead</td><td><span class="b b-todo">⬜ TODO</span></td><td></td></tr>
+       <tr><td>7</td><td>Verify no secrets remain in /apps, /conf, or source code after update</td><td>Dev Lead</td><td><span class="b b-todo">⬜ TODO</span></td><td></td></tr>
+       <tr><td>8</td><td>Run pipeline — confirm secrets injected correctly at runtime</td><td>Dev Lead</td><td><span class="b b-todo">⬜ TODO</span></td><td></td></tr>
+       <tr><td>9</td><td>Delete AMS secrets from CRX/DE after CM injection confirmed working</td><td>Dev Lead</td><td><span class="b b-todo">⬜ TODO</span></td><td></td></tr>
+       <tr><td>10</td><td>Rotate ALL secrets post-cutover (new values for prod AEMaaCS)</td><td>Dev Lead</td><td><span class="b b-todo">⬜ TODO</span></td><td></td></tr>
+     </tbody>
+   </table></div>
+
+   <h3>Section D — Environment Configuration Summary</h3>
+   <div class="tw"><table>
+     <thead><tr><th>Configuration Item</th><th>Dev</th><th>Stage</th><th>Production</th><th>Notes</th></tr></thead>
+     <tbody>
+       <tr><td>All environment variables set in Cloud Manager</td><td><span class="b b-done">✅ Done</span></td><td><span class="b b-done">✅ Done</span></td><td><span class="b b-todo">⬜ TODO</span></td><td>Verify via Cloud Manager UI before cutover</td></tr>
+       <tr><td>All secrets set as Secret type (not String)</td><td><span class="b b-done">✅ Done</span></td><td><span class="b b-done">✅ Done</span></td><td><span class="b b-todo">⬜ TODO</span></td><td>Critical — String type is visible in logs</td></tr>
+       <tr><td>Replication agent (Author → Publish) configured</td><td><span class="b b-done">✅ Done</span></td><td><span class="b b-done">✅ Done</span></td><td><span class="b b-todo">⬜ TODO</span></td><td>Test replication after each deployment</td></tr>
+       <tr><td>Mail server (SMTP) config verified</td><td><span class="b b-done">✅ Done</span></td><td><span class="b b-done">✅ Done</span></td><td><span class="b b-todo">⬜ TODO</span></td><td>Send test form submission email</td></tr>
+       <tr><td>IBX API integration configured</td><td><span class="b b-done">✅ Done</span></td><td><span class="b b-amber">🟡 In Progress</span></td><td><span class="b b-todo">⬜ TODO</span></td><td>IBX staging endpoint differs from prod</td></tr>
+       <tr><td>Partner portal integration configured</td><td><span class="b b-done">✅ Done</span></td><td><span class="b b-amber">🟡 In Progress</span></td><td><span class="b b-todo">⬜ TODO</span></td><td>Token rotation needed for prod</td></tr>
+       <tr><td>RWS Translation connector configured</td><td><span class="b b-amber">🟡 In Progress</span></td><td><span class="b b-todo">⬜ TODO</span></td><td><span class="b b-todo">⬜ TODO</span></td><td>RWS set up in progress</td></tr>
+       <tr><td>Dispatcher rules applied and validated</td><td><span class="b b-done">✅ Done</span></td><td><span class="b b-done">✅ Done</span></td><td><span class="b b-todo">⬜ TODO</span></td><td>Run Dispatcher SDK validator</td></tr>
+       <tr><td>CDN origin hostname set correctly</td><td><span class="b b-done">✅ Done</span></td><td><span class="b b-done">✅ Done</span></td><td><span class="b b-todo">⬜ TODO</span></td><td>From Cloud Manager → Environment details</td></tr>
+       <tr><td>Log forwarding configured (Grafana)</td><td><span class="b b-done">✅ Done</span></td><td><span class="b b-done">✅ Done</span></td><td><span class="b b-todo">⬜ TODO</span></td><td>Verify logs appear in Splunk/Datadog</td></tr>
+       <tr><td>No hardcoded credentials in any config</td><td><span class="b b-done">✅ Done</span></td><td><span class="b b-done">✅ Done</span></td><td><span class="b b-todo">⬜ TODO</span></td><td>Grep scan must return 0 results</td></tr>
+     </tbody>
+   </table></div>
 </section>
 
 <!-- APPENDIX -->
 <section id="appendix">
-  <div class="sec-hdr"><div class="sec-num">A</div><h2>Appendix A: UAT Sign-Off Form</h2></div>
+   <div class="sec-hdr"><div class="sec-num">A</div><h2>Appendix A: UAT Sign-Off Form</h2></div>
   <div class="tw"><table>
     <thead><tr><th>#</th><th>Test Scenario</th><th>Priority</th><th>Result</th><th>Tester</th><th>Notes</th></tr></thead>
     <tbody>
