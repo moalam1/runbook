@@ -373,7 +373,7 @@
 
       <div class="alert a-red"><span class="a-icon">🚨</span><div><strong>2 blocking actions require immediate attention today:</strong> (1) Submit the Infosec Request — approval takes 3–4 weeks, and (2) UAT plan and execution. Both are hard gates before cutover.</div></div>
 
-      <div class="tl">
+      <div class="tl" id="timeline">
         <div class="tl-item"><div class="tl-dot done">✓</div><div class="tl-label done">Phase 1 — Complete</div><div class="tl-title">Preparation & Assessment</div><div class="tl-desc">BPA complete, environments provisioned, Java 21 Migration, Code branched, GIT Pipeline , Cloud Manager set up, Adobe Support ticket open</div></div>
         <div class="tl-item"><div class="tl-dot done">✓</div><div class="tl-label done">Phase 2 — Complete</div><div class="tl-title">Code & Configuration Migration</div><div class="tl-desc">Integration point checks like IBX, Partners and Forms , BPA fixes, Maven archetype, OSGi configs, Dispatcher migration, CI/CD pipeline, first Dev deployment, QA, Stage deployment, Content Migration</div></div>
         <div class="tl-item"><div class="tl-dot active">→</div><div class="tl-label active">Phase 3 — Active Now</div><div class="tl-title">UAT, Content Migration & QA</div><div class="tl-desc">CTT extraction/ingestion, Akamai CDN setup, DNS TTL reduction, SSL/certs, InfoSec review, UAT, load testing, CAB CR</div></div>
@@ -388,17 +388,16 @@
       <div class="tw"><table>
         <thead><tr><th>#</th><th>Task</th><th>Owner</th><th>Status</th></tr></thead>
         <tbody>
-        <tr><td>1</td><td>Install CTT package on AMS Author instance</td><td>Dev Lead</td><td><span class="b b-done">Done</span></td></tr>
-        <tr><td>2</td><td>Create migration set: top-level paths, include versions = YES</td><td>Dev Lead</td><td><span class="b b-done">Done</span></td></tr>
-        <tr><td>3</td><td>Run full ingestion to AEMaaCS Stage environment</td><td>Dev Lead</td><td><span class="b b-done">Done</span></td></tr>
-        <tr><td>4</td><td><b>Validate all External Integration</b></td><td>Dev Lead</td><td><span class="b b-amber">🟡 In Progress</span></td></tr>
-        <tr><td>5</td><td><b>Validate different categories of pages with different components & templates</b></td><td>Dev Lead</td><td><span class="b b-amber">🟡 In Progress</span></td></tr>
-        <tr><td>6</td><td><b>Plan UAT execution and finalize UAT owner, dates & test scenarios</b></td><td>Dev Lead</td><td><span class="b b-amber">🟡 In Progress</span></td></tr>
-        <tr><td>7</td><td><b>QA Bug fixes</b></td><td>Dev Lead</td><td><span class="b b-amber">🟡 In Progress</span></td></tr>
-        <tr><td>8</td><td><b>Translation</b> (RWS Set Up)</td><td>Dev Lead</td><td><span class="b b-todo">⬜ TODO</span></td></tr>
-        <tr><td>9</td><td>Spot-check 50 pages/assets manually/automation in AEMaaCS Stage</td><td>QA Lead</td><td><span class="b b-todo">⬜ TODO</span></td></tr>
-        <tr><td>10</td><td>Validate DAM assets (images, PDFs, video) rendering correctly</td><td>QA Lead</td><td><span class="b b-amber">🟡 In Progress</span></td></tr>
-        <tr><td>11</td><td>Schedule incremental top-up extraction till last pre-cutover</td><td>Dev Lead</td><td><span class="b b-todo">⬜ TODO</span></td></tr>
+        <tr><td>1</td><td>Create migration set using CTT: top-level paths, include versions = YES</td><td>Dev Lead</td><td><span class="b b-done">Done</span></td></tr>
+        <tr><td>2</td><td>Run full ingestion to AEMaaCS Stage environment</td><td>Dev Lead</td><td><span class="b b-done">Done</span></td></tr>
+        <tr><td>3</td><td><b>Validate all External Integration</b></td><td>Dev Lead</td><td><span class="b b-amber">🟡 In Progress</span></td></tr>
+        <tr><td>4</td><td><b>Validate different categories of pages with different components & templates</b></td><td>Dev Lead</td><td><span class="b b-amber">🟡 In Progress</span></td></tr>
+        <tr><td>5</td><td><b>Plan UAT execution and finalize UAT owner, dates & test scenarios</b></td><td>Dev Lead</td><td><span class="b b-amber">🟡 In Progress</span></td></tr>
+        <tr><td>6</td><td><b>QA Bug fixes</b></td><td>Dev Lead</td><td><span class="b b-amber">🟡 In Progress</span></td></tr>
+        <tr><td>7</td><td><b>Translation</b> (RWS Set Up)</td><td>Dev Lead</td><td><span class="b b-todo">⬜ TODO</span></td></tr>
+        <tr><td>8</td><td>Spot-check 50 pages/assets manually/automation in AEMaaCS Stage</td><td>QA Lead</td><td><span class="b b-todo">⬜ TODO</span></td></tr>
+        <tr><td>9</td><td>Validate DAM assets (images, PDFs, video) rendering correctly</td><td>QA Lead</td><td><span class="b b-amber">🟡 In Progress</span></td></tr>
+        <tr><td>10</td><td>Schedule incremental top-up extraction till last pre-cutover</td><td>Dev Lead</td><td><span class="b b-todo">⬜ TODO</span></td></tr>
         </tbody>
       </table></div>
       <h3>Monitor CTT Extraction Logs</h3>
@@ -424,6 +423,17 @@
         <tr><td>7</td><td>UAT Session 3 — Content Authoring & analytics validation</td><td>Biz Owner + QA</td><td><span class="b b-todo">⬜ TODO</span></td></tr>
         <tr><td>8</td><td>Confirm zero open P1 defects before requesting sign-off</td><td>QA Lead</td><td><span class="b b-todo">⬜ TODO</span></td></tr>
         <tr><td>9</td><td>Business Owner signs UAT sign-off (Appendix A)</td><td>Business Owner</td><td><span class="b b-todo">⬜ TODO</span></td></tr>
+        </tbody>
+      </table></div>
+
+      <h3>UAT Scope</h3>
+      <div class="tw"><table>
+        <thead><tr><th>Category</th><th>Scope Items</th></tr></thead>
+        <tbody>
+        <tr><td>Core Experience</td><td>resources; header-footer; navigation; expereince / content fragments</td></tr>
+        <tr><td>Page Scope</td><td>lp-apac (recommend to move lp); lp; 404; 505; contact-us; about; partners; search-results; insights; metronode-resource-center; legal-gender-pay; welcome-guide; gxi-report; what-is-colocation; what-is-digital-infrastructure; resource-centers; gxi-report-2022; data-centers; products (need to check); solutions; product-solutions; teams; industries; home</td></tr>
+        <tr><td>Forms</td><td>Forms - Contact Us; Forms - Resources; AWS Call Back Form; Engage Forms; Partner alliance forms; Blind form submit; Recaptcha - form submit</td></tr>
+        <tr><td>Integrations, Tracking & SEO</td><td>Salesforce Agent Force; Salesforce Live Chat - Support*; Partner Directory; Partner registration; IBX KB - pull back; UTM Parameters - Flows in Forms - Yuhan; OpenPrise Integration; OneTrust; Equinix Fabric provider; Google Analytics &amp; GTM; Translation; Google Console Connection SEO; Lumar Connection SEO; IBX Book a Tour; Redirects</td></tr>
         </tbody>
       </table></div>
     </section>
@@ -601,8 +611,8 @@
         <thead><tr><th>Step</th><th>Activity</th><th>Owner</th><th>Status</th></tr></thead>
         <tbody>
         <tr><td>0</td><td>Go/No-Go meeting — formal GO decision recorded</td><td>Nishant + All Leads</td><td><span class="b b-todo">⬜ TODO</span></td></tr>
-        <tr></td><td>1</td><td>Final CTT top-up extraction started on AMS (AMS in read-only)</td><td>Dev Lead</td><td><span class="b b-todo">⬜ TODO</span></td></tr>
-        <tr></td><td>2</td><td>Maintenance window open — status page updated, users notified</td><td>PM</td><td><span class="b b-todo">⬜ TODO</span></td></tr>
+        <tr><td>1</td><td>Final CTT top-up extraction started on AMS (AMS in read-only)</td><td>Dev Lead</td><td><span class="b b-todo">⬜ TODO</span></td></tr>
+        <tr><td>2</td><td>Maintenance window open — status page updated, users notified</td><td>PM</td><td><span class="b b-todo">⬜ TODO</span></td></tr>
         <tr><td>3</td><td>Final CTT ingestion to AEMaaCS Production initiated</td><td>Dev Lead</td><td><span class="b b-todo">⬜ TODO</span></td></tr>
         <tr><td>4</td><td>Ingestion complete — node count verified (&lt;5% variance)</td><td>Dev Lead</td><td><span class="b b-todo">⬜ TODO</span></td></tr>
         <tr><td>5</td><td>Production pipeline deployment triggered in Cloud Manager</td><td>Dev Lead</td><td><span class="b b-todo">⬜ TODO</span></td></tr>
