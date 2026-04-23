@@ -772,6 +772,26 @@
         <tr><td>No hardcoded credentials in any config</td><td><span class="b b-done">✅ Done</span></td><td><span class="b b-done">✅ Done</span></td><td><span class="b b-todo">⬜ TODO</span></td><td>Grep scan must return 0 results</td></tr>
         </tbody>
       </table></div>
+
+      <h3>Section E — Final Technical Readiness Checklist</h3>
+      <div class="alert a-amber"><span class="a-icon">⚙️</span><div>All items below must be verified before cutover is approved. These are AEMaaCS-specific platform checks that must be completed in addition to functional QA.</div></div>
+      <div class="tw"><table>
+        <thead><tr><th>#</th><th>Check</th><th>Owner</th><th>Status</th><th>Notes</th></tr></thead>
+        <tbody>
+        <tr><td>1</td><td>Ensure <code>error.log</code> is clear of recurring errors for at least <strong>48 hours</strong> prior to Go-Live</td><td>Dev Lead</td><td><span class="b b-todo">⬜ TODO</span></td><td>Monitor via Cloud Manager log downloads or Splunk/Datadog</td></tr>
+        <tr><td>2</td><td>Confirm all custom <code>oak:index</code> definitions are deployed; verify via the <strong>Query Performance</strong> tool that no long-running queries exist</td><td>Dev Lead</td><td><span class="b b-todo">⬜ TODO</span></td><td>Use AEM Developer Console → Query Performance</td></tr>
+        <tr><td>3</td><td>Schedule a formal <strong>code freeze</strong> (all fixes tested &amp; deployed) and a <strong>content freeze</strong> (freeze author activity on AMS during cutover window to avoid migrating delta content again)</td><td>Dev Lead / PM</td><td><span class="b b-todo">⬜ TODO</span></td><td>Communicate freeze window to all authors at least 24h in advance</td></tr>
+        <tr><td>4</td><td>Final <strong>Dispatcher configuration validation</strong> — run local Dispatcher validator once again &amp; review virtual host configuration carefully</td><td>Dev Lead</td><td><span class="b b-todo">⬜ TODO</span></td><td><code>./bin/validator full ./dispatcher/src</code> must return 0 errors</td></tr>
+        <tr><td>5</td><td>Verify <code>robots.txt</code> and <strong>sitemaps</strong> are correctly configured to prevent invalid indexing by Google Search engines</td><td>Dev Lead</td><td><span class="b b-todo">⬜ TODO</span></td><td>Check robots.txt blocks non-prod and sitemap URLs are correct for prod domain</td></tr>
+        <tr><td>6</td><td>Ensure <strong>service users, groups, and ACLs</strong> are handled via OSGi Repoinit statements without errors</td><td>Dev Lead</td><td><span class="b b-todo">⬜ TODO</span></td><td>Check <code>error.log</code> for any Repoinit parse or execution failures post-deployment</td></tr>
+        <tr><td>7</td><td><strong>User management</strong> — all existing production authors and administrators have the necessary roles assigned in the <strong>Adobe Admin Console</strong>; all smoke testing team / business user members have prior access to PROD</td><td>Dev Lead / PM</td><td><span class="b b-todo">⬜ TODO</span></td><td>Verify via Adobe Admin Console → Products → AEM Cloud Service</td></tr>
+        <tr><td>8</td><td>Ensure required <strong>Asset Profiles</strong> are active for the <strong>Asset Compute service</strong> for generating renditions</td><td>Dev Lead</td><td><span class="b b-todo">⬜ TODO</span></td><td>Validate via Tools → Assets → Processing Profiles in AEM Author</td></tr>
+        <tr><td>9</td><td>Confirm successful distribution from <strong>Author → Publish</strong> (Sling Content Distribution) and ensure no queue blockages</td><td>Dev Lead</td><td><span class="b b-todo">⬜ TODO</span></td><td>Check Distribution queues via Tools → Deployment → Distribution; queues must be empty</td></tr>
+        <tr><td>10</td><td>Ensure <strong>Adobe Granite Workflow Purge Configuration</strong> is set up to regularly purge completed/running workflow instances based on age and status (no custom workflows, configure for OOTB)</td><td>Dev Lead</td><td><span class="b b-todo">⬜ TODO</span></td><td>Tools → Workflow → Purge; set schedule for DAM Update Asset completed instances</td></tr>
+        <tr><td>11</td><td>Configure <strong>Notification Profiles</strong> to keep administrators informed during the go-live process (<em>Incident Notification — Cloud Service</em> &amp; <em>Proactive Notification — Cloud Service Profile</em>)</td><td>Dev Lead / PM</td><td><span class="b b-todo">⬜ TODO</span></td><td>See <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/onboarding/concepts/notification-profiles" target="_blank" style="color:var(--blue)">Adobe Docs — Notification Profiles</a></td></tr>
+        <tr><td>12</td><td>Post-cutover: configure <strong>Traffic Filter</strong> and <strong>Rate Limit Traffic Filter Rules</strong> (also covered under Akamai configuration steps)</td><td>Dev Lead</td><td><span class="b b-todo">⬜ TODO</span></td><td>Configure via Cloud Manager CDN config pipeline; applies at AEM CDN layer</td></tr>
+        </tbody>
+      </table></div>
     </section>
 
     <!-- APPENDIX -->
