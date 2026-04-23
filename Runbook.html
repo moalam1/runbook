@@ -634,12 +634,12 @@
       <div class="alert a-amber"><span class="a-icon">⚠️</span><div><strong>Keep AMS in maintenance mode for 72 hours post-cutover.</strong> This is your rollback safety net. Rollback authority: Nishant or Dev Lead.</div></div>
       <h3>Rollback Triggers</h3>
       <ul class="cl">
-        <li><div class="cb"></div>Production error rate &gt; 5% sustained for more than 10 minutes</li>
-        <li><div class="cb"></div>Response time &gt; 8 seconds on any core user journey</li>
-        <li><div class="cb"></div>Critical functionality unavailable: checkout / login / search / DAM</li>
+        <li><div class="cb"></div>Production error rate sustained for more than 10 minutes</li>
+        <li><div class="cb"></div>Response time on any core user journey</li>
+        <li><div class="cb"></div>Critical functionality unavailable</li>
         <li><div class="cb"></div>Data integrity issues — content missing or corrupted post-cutover</li>
         <li><div class="cb"></div>Security incident detected on new environment</li>
-        <li><div class="cb"></div>Site unavailable for &gt; 15 continuous minutes after go-live</li>
+        <li><div class="cb"></div>Site unavailable for continuous minutes after go-live</li>
         <li><div class="cb"></div>Akamai CDN not serving correct content after DNS propagation</li>
       </ul>
       <h3>Rollback Execution</h3>
@@ -667,7 +667,7 @@
       <div class="tw"><table>
         <thead><tr><th>Audience</th><th>Channel</th><th>Content</th><th>Owner</th></tr></thead>
         <tbody>
-        <tr><td><strong>C-Suite / Exec Sponsor</strong></td><td>Email + Teams</td><td>RAG status, Go/No-Go readiness, decisions needed</td><td>Jenny Hughes</td></tr>
+        <tr><td><strong>Leadership</strong></td><td>Email + Teams</td><td>RAG status, Go/No-Go readiness, decisions needed</td><td>Jenny Hughes</td></tr>
         <tr><td><strong>Business Stakeholders</strong></td><td>Email + Teams</td><td>UAT schedule, Stage URL, known issues, cutover date</td><td>Monish Rout</td></tr>
         <tr><td><strong>Project Manager</strong></td><td>Email + Teams</td><td>UAT schedule, Stage URL, known issues, cutover date</td><td>Nishant Sharma</td></tr>
         <tr><td><strong>Dev / DevOps Team</strong></td><td>Daily Standup + JIRA</td><td>Blockers, CTT/Akamai/security progress, upcoming tasks</td><td>Tech Lead</td></tr>
@@ -713,7 +713,7 @@
         <tr><td>6</td><td>Verify Stage deployment is from Cloud Manager pipeline (not local)</td><td>Dev Lead</td><td><span class="b b-todo">⬜ TODO</span></td><td></td></tr>
         <tr><td>7</td><td>Tag release commit: git tag v1.0.0-prod-cutover</td><td>Dev Lead</td><td><span class="b b-todo">⬜ TODO</span></td><td></td></tr>
         <tr><td>8</td><td>Confirm production pipeline points to release tag / branch</td><td>Pritam Mohanty</td><td><span class="b b-todo">⬜ TODO</span></td><td></td></tr>
-        <tr><td>9</td><td>Lock migration/aemcs branch — no commits without PM approval</td><td>Dev Lead</td><td><span class="b b-todo">⬜ TODO</span></td><td></td></tr>
+        <tr><td>9</td><td>Lock migration/release branch — no commits without Leads approval</td><td>Dev Lead</td><td><span class="b b-todo">⬜ TODO</span></td><td></td></tr>
         <tr><td>10</td><td>Document final commit SHA and pipeline ID for audit trail</td><td>Dev Lead</td><td><span class="b b-todo">⬜ TODO</span></td><td></td></tr>
         </tbody>
       </table></div>
@@ -787,8 +787,6 @@
         <tr><td>5</td><td>DAM assets render: images, PDFs, video</td><td><span class="b b-red">P1</span></td><td>PASS / FAIL</td><td></td><td></td></tr>
         <tr><td>6</td><td>Authoring: create, edit, publish page on AEMaaCS</td><td><span class="b b-red">P1</span></td><td>PASS / FAIL</td><td></td><td></td></tr>
         <tr><td>7</td><td>All 301/302 redirects working correctly</td><td><span class="b b-red">P1</span></td><td>PASS / FAIL</td><td></td><td></td></tr>
-        <tr><td>8</td><td>Mobile responsive layout — iOS and Android</td><td><span class="b b-amber">P2</span></td><td>PASS / FAIL</td><td></td><td></td></tr>
-        <tr><td>10</td><td>Analytics tracking: pageview, CTA click, form submit</td><td><span class="b b-amber">P2</span></td><td>PASS / FAIL</td><td></td><td></td></tr>
         </tbody>
       </table></div>
       <div class="tw"><table>
